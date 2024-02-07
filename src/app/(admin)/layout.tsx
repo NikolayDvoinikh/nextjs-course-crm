@@ -2,16 +2,16 @@ import Sidebar from '../components/sidebar';
 
 export interface LayoutProps {
   children: React.ReactNode;
-  header: React.ReactNode;
-  toolbar: React.ReactNode;
-  modal: React.ReactNode;
+  // header: React.ReactNode;
+  // toolbar: React.ReactNode;
+  // modal: React.ReactNode;
 }
 
 export default function Layout({
   children,
-  header,
-  toolbar,
-  modal,
+  // header,
+  // toolbar,
+  // modal,
 }: LayoutProps) {
   return (
     <>
