@@ -1,4 +1,3 @@
-import React from 'react';
 import { getSummarySales } from '@/lib/api';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';

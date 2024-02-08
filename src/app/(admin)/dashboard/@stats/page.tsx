@@ -5,6 +5,13 @@ import Link from 'next/link';
 
 export interface PageProps {}
 
+export interface SummaryStatsProps {
+  promotions: number;
+  categories: number;
+  newCompanies: number;
+  activeCompanies: number;
+}
+
 const labelByStat = {
   promotions: 'Total promotions',
   categories: 'Total categories',
@@ -13,7 +20,9 @@ const labelByStat = {
 };
 
 export default async function Page({}: PageProps) {
-  const data = await getSummaryStats();
+  const data: SummaryStatsProps = await new Promise((res) =>
+    setTimeout(() => res(getSummaryStats()), 5000),
+  );
 
   return (
     <div className="grid grid-cols-12 gap-5">

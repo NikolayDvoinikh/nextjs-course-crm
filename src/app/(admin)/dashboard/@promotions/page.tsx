@@ -1,4 +1,3 @@
-import React from 'react';
 import { getSummaryPromotions } from '@/lib/api';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';
@@ -8,7 +7,9 @@ import DashboardCard from '@/app/components/dashboard-card';
 export interface PageProps {}
 
 export default async function Page({}: PageProps) {
-  const data = await getSummaryPromotions();
+  const data: any[] = await new Promise((res) =>
+    setTimeout(() => res(getSummaryPromotions()), 6000),
+  );
 
   return (
     <DashboardCard label="Promotions">
